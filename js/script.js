@@ -25,20 +25,20 @@ let scontoAnziani = ((biglietto * 40) / 100);
 
 // Prezzo finale
 if (etaPasseggero < 18) {
-    document.writeln("Il prezzo del biglietto è € " + (biglietto - scontoMinorenni));
-    console.log("Prezzo biglietto minorenni € ")
+    document.writeln("Il prezzo del biglietto è € " + (biglietto - scontoMinorenni).toFixed(2));
+    console.log("Prezzo biglietto minorenni € ");
 } else if (etaPasseggero > 65) {
-    document.writeln("Il prezzo del biglietto è € " + (biglietto - scontoAnziani));
-    console.log("Prezzo biglietto over 65 € ")
+    document.writeln("Il prezzo del biglietto è € " + (biglietto - scontoAnziani).toFixed(2));
+    console.log("Prezzo biglietto over 65 € ");
 } else {
-    document.writeln("Il prezzo del biglietto è € " + biglietto);
-    console.log("Prezzo biglietto pieno € ")
+    document.writeln("Il prezzo del biglietto è € " + biglietto.toFixed(2));
+    console.log("Prezzo biglietto pieno € ");
 }
 
 // Console
 console.log("Chilometri " + km);
 console.log("Età passeggero " + etaPasseggero);
-console.log(" Prezzo al chilometro € " + prezzoAlChilometro);
+console.log("Prezzo al chilometro € " + prezzoAlChilometro);
 console.log("Prezzo biglietto € " + biglietto);
 console.log("Sconto minorenni € " + scontoMinorenni);
 console.log("Sconto over 65 € " + scontoAnziani);

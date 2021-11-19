@@ -12,13 +12,33 @@ let km = parseInt(prompt('Chilometri da percorrere'));
 let etaPasseggero = parseInt(prompt('Età del passeggero'));
 
 // Prezzo al chilometro
-const prezzoAlChilometro = parseInt(0.21);
+const prezzoAlChilometro = 0.21;
 
 // Prezzo biglietto
 let biglietto = (km * prezzoAlChilometro);
 
+// Sconto minorenni
+let scontoMinorenni = ((biglietto * 20) / 100);
+
+// Sconto over 65
+let scontoAnziani = ((biglietto * 40) / 100);
+
+// Prezzo finale
+if (etaPasseggero < 18) {
+    document.writeln("Il prezzo del biglietto è € " + (biglietto - scontoMinorenni));
+    console.log("Prezzo biglietto minorenni € ")
+} else if (etaPasseggero > 65) {
+    document.writeln("Il prezzo del biglietto è € " + (biglietto - scontoAnziani));
+    console.log("Prezzo biglietto over 65 € ")
+} else {
+    document.writeln("Il prezzo del biglietto è € " + biglietto);
+    console.log("Prezzo biglietto pieno € ")
+}
+
 // Console
 console.log("Chilometri " + km);
 console.log("Età passeggero " + etaPasseggero);
-console.log(" Prezzo al chilometro " + prezzoAlChilometro);
-console.log("Prezzo biglietto " + biglietto);
+console.log(" Prezzo al chilometro € " + prezzoAlChilometro);
+console.log("Prezzo biglietto € " + biglietto);
+console.log("Sconto minorenni € " + scontoMinorenni);
+console.log("Sconto over 65 € " + scontoAnziani);

@@ -18,10 +18,10 @@ const prezzoAlChilometro = 0.21;
 let biglietto = (km * prezzoAlChilometro);
 
 // Sconto minorenni
-let scontoMinorenni = ((biglietto * 20) / 100);
+let scontoMinorenni = ((biglietto * 20) / 100).toFixed(2);
 
 // Sconto over 65
-let scontoAnziani = ((biglietto * 40) / 100);
+let scontoAnziani = ((biglietto * 40) / 100).toFixed(2);
 
 // Prezzo finale
 if (etaPasseggero < 18) {
